@@ -1,0 +1,10 @@
+<aura:component implements="lightning:availableForChatterExtensionComposer">
+    <aura:handler name="this" value="{!this}" action="{!init}" />
+    
+    <div class="container">
+        <span class="quote" aura:id="quote"></span>
+        <span class="author" aura:id="author"></span>
+        <ui:button label="Get next Quote" press="{!c.getQuote}"/>
+    </div>
+	
+</aura:component>

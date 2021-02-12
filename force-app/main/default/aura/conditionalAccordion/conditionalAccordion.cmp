@@ -1,0 +1,28 @@
+<aura:component >
+    <aura:attribute name="isDVisible" type="boolean" default="false" />
+    
+    <lightning:button onclick="{! c.handleShowActiveSecttionName }" label="Show Active Section Name" />
+    <lightning:button onclick="{! c.handleToggleSectionD }" label="Toggle Section D" />
+    <lightning:accordion aura:id="accordion" activeSectionName="B">
+        <lightning:accordionSection name="A" label="Accordion Title A">
+        <p>This is the content area for section A.</p>
+        <p>Donec vitae tellus egestas, faucibus ipsum ac, imperdiet erat. Nam venenatis non ante at sagittis. Integer vel purus eget nunc semper placerat. Nam tristique quam leo, et posuere enim condimentum quis. Ut sagittis libero id lectus tempor maximus. Nunc ut tincidunt eros, a hendrerit leo. Suspendisse quis fermentum dolor. Nulla euismod consectetur leo, id condimentum nunc consequat quis.</p>
+        </lightning:accordionSection>
+        <lightning:accordionSection name="B" label="Accordion Title B">
+            <p>This is the content area for section B.</p>
+            <p>Nam at elit et justo scelerisque ullamcorper vel a felis. Mauris sit amet lorem sed est sagittis blandit nec ac turpis. Ut a mi id turpis pharetra ornare. Nullam rhoncus feugiat nunc, ac pulvinar felis pulvinar at. Nullam efficitur aliquet justo et ultricies. Maecenas eu felis aliquam, tincidunt elit at, suscipit leo. Duis ut urna nec nibh hendrerit lacinia. Sed non auctor libero. Sed pellentesque tempor mollis.</p>
+        </lightning:accordionSection>
+        <lightning:accordionSection>
+            <p>This is the content area for section B.</p>
+            <p>This is the content area for section B.</p>
+        </lightning:accordionSection>
+        <lightning:accordionSection name="C" label="Accordion Title C">
+            <p>This is the content area for section C.</p>
+        </lightning:accordionSection>
+        <aura:if isTrue="{!v.isDVisible }">
+            <lightning:accordionSection name="D" label="Accordion Title D">
+                <p>This is the content area for section D.</p>
+            </lightning:accordionSection>
+        </aura:if>
+    </lightning:accordion>
+</aura:component>

@@ -1,0 +1,24 @@
+<apex:page controller="SamplePolar" sidebar="false">
+    <apex:form >
+      
+       
+        <apex:actionStatus startText="(incrementing...)" 
+            stopText="(done)" id="counterStatus" />
+            
+        <apex:actionPoller action="{!incrementCounter}" status="counterStatus" interval="5" reRender="counter"/>
+    
+    </apex:form>
+   
+    <apex:form >
+  
+        <apex:outputpanel id="counter">
+            <apex:outputText value="Click Me!: {!count}"/>
+            <apex:actionSupport event="onclick" action="{!incrementCounter}" rerender="counter" status="counterStatus"/>
+        </apex:outputpanel>
+        
+        <apex:actionStatus id="counterStatus" 
+                           startText=" (incrementing...)" 
+                           stopText=" (done)"/>
+    </apex:form>
+   
+</apex:page>

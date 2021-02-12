@@ -1,0 +1,13 @@
+<apex:page standardController="Lead" extensions="PanValidatorcls" sidebar="false">
+  <apex:form >
+      <apex:pageBlock title="Envalid PAN Detail">
+          <apex:pageBlockTable value="{!leadList}" var="l">
+              <apex:column title="Lead Id" value="{!l.Id}"/>
+              <apex:column title="PAN Number" value="{!l.PAN__c}"/>
+          </apex:pageBlockTable>
+          <apex:pageBlockSection >
+              <apex:commandButton value="Show Invalid PAN" action="{!displayInvalidPan}"/>
+          </apex:pageBlockSection>
+      </apex:pageBlock>
+        </apex:form>
+</apex:page>

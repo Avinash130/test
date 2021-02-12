@@ -1,0 +1,13 @@
+<aura:component>
+    <!--lightning:clickToDialService is for internal use only.
+        Use Open CTI in your org instead. For more information, see the Open CTI Dev Guide.
+        https://developer.salesforce.com/docs/atlas.en-us.api_cti.meta/api_cti/sforce_api_cti_intro.htm -->
+
+    <lightning:clickToDial aura:id="clickToDialService"/>
+
+    <lightning:button label="enableClickToDial" onclick="{! c.enableClickToDial }"/>
+    <lightning:button label="disableClickToDial" onclick="{! c.disableClickToDial }"/>
+    <lightning:button label="onClickToDial" onclick="{! c.onClickToDial }"/>
+    <p><lightning:clickToDial value="14155555554"/></p>
+    <p><lightning:clickToDial value="14155555555" recordId="5003000000D8cuI" params="accountSid=xxx, sourceId=xxx, apiVersion=123"/></p>
+</aura:component>

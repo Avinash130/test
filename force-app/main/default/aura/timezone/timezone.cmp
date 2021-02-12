@@ -1,0 +1,8 @@
+<aura:component>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="datetime" type="DateTime"/>
+    <lightning:formattedDateTime value="{!v.datetime}" timeZone="Europe/Berlin" 
+                                 year="numeric" month="numeric" day="numeric"/>
+    <ui:outputCurrency value="100000" />
+
+</aura:component>

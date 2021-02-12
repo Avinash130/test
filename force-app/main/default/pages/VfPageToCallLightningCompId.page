@@ -1,0 +1,15 @@
+<apex:page standardController="Account">
+    <apex:includeLightning />
+    <div id="LightningCompContainer" />
+    
+    <script>
+    $Lightning.use("c:LightningCompForVFAPP",function(){
+        $Lightninh.createComponent("c:LightningCompForVFID",{
+    },
+                 "LightningCompContainer",
+                   function(component) {
+                       component.set("v.AccIDFromVfPage",'{!$CurrentPage.parameters.Id}');
+                       });
+        });
+    </script>
+</apex:page>

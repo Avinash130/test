@@ -1,0 +1,10 @@
+<aura:component>
+    <aura:attribute name="options" type="List" default="[
+                                                        {'label': 'New', 'value': 'new'},
+                                                        {'label':'In Progress', 'value':'inProgress'},
+                                                        {'label': 'Finished', 'value': 'finished'}]" />
+       
+    
+        <lightning:combobox name="proress" label="Status" value="inProgress" placeholder="Select Progress" options="{! v.options }" disabled="true"/>
+    
+    </aura:component>

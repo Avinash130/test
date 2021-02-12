@@ -1,0 +1,15 @@
+<aura:component>
+    <aura:attribute name="liked" default="false" type="Boolean" />
+    <aura:attribute name="answered" default="false" type="Boolean" />
+
+    <div class="slds-m-around_medium">
+        <lightning:buttonIconStateful iconName="utility:like" selected="{! v.liked }" onclick="{! c.handleLikeButtonClick }" variant="border-filled" alternativeText="Like" />
+    </div>
+    <div class="slds-m-around_medium">
+        <lightning:buttonIconStateful iconName="utility:answer" selected="{! v.answered }" onclick="{! c.handleAnswerButtonClick }" variant="border-filled" alternativeText="Answer" size="small"/>
+    </div>
+    <!-- disabled -->
+    <div class="slds-m-around_medium">
+        <lightning:buttonIconStateful iconName="utility:like"  alternativeText="Disabled" disabled="true"/>
+    </div>
+</aura:component>

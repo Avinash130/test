@@ -1,0 +1,5 @@
+<apex:page >
+ 
+ {! $Label.WebinarLabel}
+ 
+</apex:page>

@@ -1,0 +1,3 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId">
+    <lightning:button label="Edit Account" onclick="{!c.editAccount}"/>
+</aura:component>

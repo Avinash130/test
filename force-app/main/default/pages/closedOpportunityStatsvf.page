@@ -1,0 +1,5 @@
+<apex:page controller="SummaryStatsController">
+    <p>
+        Here is a statistics: {!veryLargeSummaryStat}
+    </p>
+</apex:page>

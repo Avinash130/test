@@ -1,0 +1,16 @@
+<apex:page standardController="Account">
+    <apex:tabPanel >
+        <apex:tab label="Details" name="AccountDetails" id="tabDetails">
+            <apex:detail relatedList="false" title="false"/>
+        </apex:tab>
+        <apex:tab label="Contacts" name="Contacts" id="tabContacts">
+            <apex:relatedList subject="{!Account}" list="Contacts"/>
+        </apex:tab>
+        <apex:tab label="Opportunities" name="Opportunities" id="tabOpportunities">
+            <apex:relatedList subject="{!Account}" list="Opportunities"/>
+        </apex:tab>
+        <apex:tab label="Open Activities" name="Open Activities" id="tabOpenActivities">
+            <apex:relatedList subject="{!Account}" list="Open Activities"/>
+        </apex:tab>
+    </apex:tabPanel>
+</apex:page>

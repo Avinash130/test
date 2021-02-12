@@ -1,0 +1,74 @@
+<aura:component >
+	<div class="slds-m-top_medium slds-m-bottom_large">
+        <h2 class="slds-text-heading_small slds-m-bottom_medium">
+            Button Menu with <code>menusidebar</code> and <code>menuItem</code> components.
+        </h2>
+        <div class="slds-p-around_medium container lgc-bg">
+            <lightning:buttonMenu alternativeText="Show menu">
+                <lightning:menuSubheader label="Header Alpha" />
+                <lightning:menuItem value="MenuItemOne" label="Menu Item One" />
+                <lightning:menuItem value="MenuItemTwo" label="Menu Item Two" />
+                <lightning:menuSubheader label="Header Alpha" />
+                <lightning:menuItem value="MenuItemThree" label="Menu Item Three" />
+                <lightning:menuItem value="MenuItem" label="Menu Item Three" />
+            </lightning:buttonMenu>
+        </div>
+    </div>
+    
+    <div class="slds-m-top_medium slds-m-bottom_large">
+        <h2 class="slds-text-heading_small slds-m-bottom_medium">
+            Button Menu with <code>menusidebar</code> and <code>menuItem</code> components.
+        </h2>
+        
+             
+        <div class="slds-p-around_medium container lgc-bg">
+            <lightning:buttonMenu toolTip="Dividers use standard variant" alternativeText="Show menu">
+                <lightning:menuItem value="MenuItemOne" label="Menu Item One" />
+                <lightning:menuItem value="MenuItemOne" label="Menu Item Two" />
+                <lightning:menuDivider />
+                <lightning:menuItem value="MenuItemThree" label="Menu Item Three" />
+                <lightning:menuDivider />
+                <lightning:menuItem value="MenuItemFour" label="Menu Item Four" />
+            </lightning:buttonMenu> 
+            
+            <lightning:buttonMenu toolTip="Dividers use standard variant" alternativeText="Show menu" class="slds-m-left_xx-small">
+                <lightning:menuItem value="MenuItemOne" label="Menu Item One" />
+                <lightning:menuItem value="MenuItemOne" label="Menu Item Two" />
+                <lightning:menuDivider variant="compact" /> 
+                <lightning:menuItem value="MenuItemOne" label="Menu Item Three" />
+                <lightning:menuDivider variant="compact" />
+                <lightning:menuItem value="MenuItemOne" label="Menu Item Four" />
+            </lightning:buttonMenu>
+        </div>
+    </div>
+    
+    <div class="slds-m-top_medium slds-m-bottom_large">
+         <h2 class="slds-text-heading_small slds-m-bottom_medium">
+            Button Menus with <code>menuSubheader</code>, <code>menuDivider</code>, and <code>menuItem</code> components. The <code>menuDivider</code> components use the <code>standard</code> and <code>compact</code> variants.
+        </h2>
+        
+        <div class="slds-p-around_medium container lgc-bg">
+             <lightning:buttonMenu tooltip="Dividers use standard variant" alternativeText="Show menu">
+                <lightning:menuSubheader label="Header Alpha" />
+                <lightning:menuItem value="MenuItemOne" label="Menu Item One" />
+                <lightning:menuItem value="MenuItemTwo" label="Menu Item Two" />
+                <lightning:menuDivider />
+                <lightning:menuSubheader label="Header Beta" />
+                <lightning:menuItem value="MenuItemThree" label="Menu Item Three" />
+                <lightning:menuDivider />
+                <lightning:menuItem value="MenuItemFour" label="Menu Item Four" />
+            </lightning:buttonMenu>
+
+            <lightning:buttonMenu tooltip="Dividers use compact variant" alternativeText="Show menu" class="slds-m-left_xx-small">
+                <lightning:menuSubheader label="Header Alpha" />
+                <lightning:menuItem value="MenuItemOne" label="Menu Item One" />
+                <lightning:menuItem value="MenuItemTwo" label="Menu Item Two" />
+                <lightning:menuDivider variant="compact" />
+                <lightning:menuSubheader label="Header Beta" />
+                <lightning:menuItem value="MenuItemThree" label="Menu Item Three" />
+                <lightning:menuDivider variant="compact" />
+                <lightning:menuItem value="MenuItemFour" label="Menu Item Four" />
+            </lightning:buttonMenu>       
+        </div>
+    </div>
+</aura:component>

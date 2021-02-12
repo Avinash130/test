@@ -1,0 +1,12 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	 <div class="slda-p-around_small">
+        <h1>I am in lightning component</h1>
+        <p>
+            I aminside paragraph
+        </p>        
+        <div>
+            I am inside dic tag
+        </div>
+        <span>I am inside span tag</span>
+    </div>
+</aura:component>

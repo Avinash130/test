@@ -1,0 +1,16 @@
+<apex:page controller="SalesforceConvoInfo">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockTable value="{!sfInstances}" var="sf">
+                <apex:column headerValue="sms from" value="{!sf.action}"/>
+                <apex:column headerValue="tooltip" value="{!sf.tooltip}"/>
+                <apex:column headerValue="company_timezone" value="{!sf.company_timezone}"/>
+                <apex:column headerValue="direction" value="{!sf.direction}"/>
+                <apex:column headerValue="status" value="{!sf.status}"/>
+                <apex:column headerValue="to" value="{!sf.to}"/>
+                <apex:column headerValue="message" value="{!sf.message}"/>
+                <apex:column headerValue="duration" value="{!sf.duration}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

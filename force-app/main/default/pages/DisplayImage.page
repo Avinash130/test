@@ -1,0 +1,8 @@
+<apex:page sidebar="false" showHeader="false">
+    <apex:pageBlock title="A Block">
+        <apex:pageBlockSection title="A Block Section">
+            This is third components!
+            <apex:image title="Show Image" url="https://developer.salesforce.com/files/salesforce-developer-network-logo.png"/>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

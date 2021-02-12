@@ -1,0 +1,9 @@
+<aura:documentation>
+	<aura:description>Documentation For Registration Form</aura:description>
+    <aura:example name="dataTable" ref="DataTableSelectableRows" label="Registraion Form">
+		Example Description For Data Table Rows
+	</aura:example>
+	<aura:example name="registrationForm" ref="Regisration_Component" label="Registraion Form">
+		Example Description
+	</aura:example>
+</aura:documentation>

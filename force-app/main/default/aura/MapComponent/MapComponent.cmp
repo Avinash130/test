@@ -1,0 +1,8 @@
+<aura:component controller="MyMapController">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="Newmap" type="Map" />
+    
+    <li>Key1 value is {!v.Newmap.key1}</li>
+    <li>Key2 value is {!v.Newmap.key2}</li>
+    
+</aura:component>

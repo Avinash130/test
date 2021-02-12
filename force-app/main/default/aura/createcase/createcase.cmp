@@ -1,0 +1,8 @@
+<aura:component implements="lightning:availableforFlowActions" >
+	 <aura:attribute name="InputContactID" type="String" />
+  <aura:attribute name="InputAccountID" type="String" />
+  <aura:attribute name="InputType" type="String" />
+  <aura:attribute name="InputOrigin" type="String" />
+  <aura:attribute name="InputReason" type="String" />
+  <aura:attribute name="InputSubject" type="String" /> 
+</aura:component>

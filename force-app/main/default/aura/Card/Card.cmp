@@ -1,0 +1,20 @@
+<aura:component >
+    
+    <aura:attribute name="title" type="String" default="Custom title"/>
+    
+    <lightning:card >
+        <aura:set attribute="title">
+            <Lightning:icon iconName="utility:connected_apps" size="small" />
+            {!v.title}
+        </aura:set>
+        <aura:set attribute="footer">
+            <lightning:badge label="Tag1"/>
+            <lightning:badge label="Tag2"/>
+            <lightning:badge label="Tag3"/>
+        </aura:set>
+        <p class="slds-p-horizontal_small">
+            Card Body (custom component)
+        </p>
+    </lightning:card>
+	
+</aura:component>

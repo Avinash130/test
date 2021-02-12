@@ -1,0 +1,33 @@
+<apex:page standardController="Case" recordSetvar="cases">
+    <apex:pageBlock >
+        <apex:form id="theForm">
+04
+            <apex:panelGrid columns="2">
+05
+                <apex:outputLabel value="View:"/>
+06
+                <apex:selectList value="{!filterId}" size="1">
+07
+                    <apex:actionSupport event="onchange" rerender="list"/>
+08
+                    <apex:selectOptions value="{!listviewoptions}"/>
+09
+                </apex:selectList>
+10
+            </apex:panelGrid>
+11
+            <apex:pageBlockSection >
+12
+                <apex:dataList var="c" value="{!cases}" id="list">
+13
+                {!c.subject}
+14
+                </apex:dataList>
+15
+            </apex:pageBlockSection>
+16
+        </apex:form>
+17
+    </apex:pageBlock>
+18
+</apex:page>

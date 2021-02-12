@@ -1,0 +1,16 @@
+<apex:page standardController="account" recordSetVar="accounts">
+    <apex:form >
+      <apex:pageBlock >
+          <apex:pageBlockTable value="{!accounts}" var="a">
+              <apex:column value="{!a.name}" headerValue="Account Name"/>
+              <apex:column value="{!a.type}" headerValue="Account Type"/>
+              <apex:column value="{!a.accountnumber}" headerValue="Account Number"/>
+              <apex:column value="{!a.industry}" headerValue="Account Industry"/>
+          </apex:pageBlockTable>
+          <apex:commandButton action="{!first}"  value="First"/>
+          <apex:commandButton action="{!Next}"  value="Next"/>
+          <apex:commandButton action="{!previous}"  value="Previous"/>
+          <apex:commandButton action="{!last}"  value="Last"/>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

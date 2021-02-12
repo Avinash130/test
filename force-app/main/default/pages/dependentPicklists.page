@@ -1,0 +1,13 @@
+<apex:page standardController="Account">
+    <apex:form >
+        <apex:pageBlock mode="edit">
+            <apex:pageBlockSection title="Dependent Picklists" columns="2">
+            <apex:inputField value="{!Account.Industry}"/>
+            <apex:inputField value="{!Account.Subcategories__c}"/>
+                </apex:pageBlockSection>
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save" action="{!save}"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

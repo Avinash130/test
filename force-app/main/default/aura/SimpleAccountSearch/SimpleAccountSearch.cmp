@@ -1,0 +1,25 @@
+<aura:component controller="searchAccountController" >
+    <aura:attribute name="keywordHolder" type="string" />
+    <aura:attribute name="accountList" type="list" />
+    <lightning:input name="AccountSearch"  label="Enter Account Name" value="{!v.keywordHolder}"/>
+    <lightning:button label="Search Account" onclick="{!c.findAccount}" />
+    <div class="slds-grid slds-wrap">
+    <aura:iteration var="acc" items="{!v.accountList}" >
+        <div class="slds-col slds-size_1-of-4 slds-p-around_small">
+    <lightning:card title="Account Information" footer="Sample footer">
+        <aura:set attribute="actions">
+            <lightning:button label="Show Full Details"/>
+        </aura:set>
+        <p class="slds-p-horizontal_small">
+        {!acc.Name}
+        {!acc.type}
+        {!acc.industry}
+        {!acc.phone}
+        </p>
+    </lightning:card>
+        </div> 
+
+
+    </aura:iteration>
+    </div>
+</aura:component>

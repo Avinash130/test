@@ -1,0 +1,4 @@
+<aura:event type="APPLICATION" description="Event template" >
+<!-- Message attribute in application event -->
+<aura:attribute name="Message" type="String" />
+</aura:event>

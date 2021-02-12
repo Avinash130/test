@@ -1,0 +1,21 @@
+<aura:component>
+    <aura:attribute name="options" type="List" default="[]"/>
+    <aura:attribute name="values" type="List" default="[]"/>
+    <aura:attribute name="requiredOptions" type="List" default="[]"/>
+    <aura:attribute name="min" type="Integer" default="5"/>
+    <aura:attribute name="max" type="Integer" default="10"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    
+    <lightning:dualListbox name="multipleOptions"  
+                           label= "Select Options (atleast 5 and atmost 10)" 
+                           sourceLabel="Available" 
+                           selectedLabel="Selected" 
+                           options="{!v.options}" 
+                           value="{!v.values}" 
+                           requiredOptions ="{!v.requiredOptions}"
+                           min="{!v.min}"
+                           max="{!v.max}"
+                           onchange="{! c.handleChange }"/>
+
+</aura:component>

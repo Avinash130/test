@@ -1,0 +1,7 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global" >
+    <div>
+        HI I AM COMPONENT AND I AM GETTING CALLED FROM VF.
+    </div>
+    <aura:attribute name="VfPageMethod" type="object"/>  <!--Attribute to take Vf page method-->
+    <lightning:button label="Click me to pass message to VF page" onclick="{!c.doAction}"/>
+</aura:component>

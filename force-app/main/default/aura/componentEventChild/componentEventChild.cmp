@@ -1,0 +1,9 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global">
+    
+    <!-- Event Register on child component -->
+    <aura:registerEvent name="cmpEvent" type="c:componentEvent" />
+    
+    <!-- On click of button fire an event and pass the value from child to parent -->
+    <button class="slds-button slds-button_brand" onclick="{!c.onclick}">Child Button</button>
+	
+</aura:component>

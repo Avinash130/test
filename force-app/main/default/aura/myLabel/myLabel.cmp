@@ -1,0 +1,4 @@
+<aura:component controller="LabelController">
+    <aura:attribute name="Expire_On" type="String" default=" "/>
+    <lightning:input name="mytext" label="{!v.Expire_On}"/>
+</aura:component>

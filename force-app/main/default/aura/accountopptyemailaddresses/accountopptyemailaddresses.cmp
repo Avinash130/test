@@ -1,0 +1,16 @@
+<aura:component implements="clients:availableForMailAppAppPage,clients:hasItemContext"
+                controller="componentController">
+    
+    <aura:handler name="init" value="{!this}" action="{!c.handlePeopleChange}" />
+    <aura:attribute name="accounts" type="List" />
+    <aura:attribute name="opportunities" type="List" />
+    
+    <aura:iteration items="{!v.accounts}" var="acc">
+        {!acc.name} => {!acc.age}
+    </aura:iteration>
+    <aura:iteration items="{!v.opportunities}" var="opp">
+        {!opp.name} => {!opp.closeIn} Days till closing
+
+    </aura:iteration>
+	
+</aura:component>

@@ -1,0 +1,26 @@
+<apex:page controller="SampleSOSL">
+  <apex:form >
+  <apex:inputText value="{!searchStr}"/>
+    <apex:commandButton value="Search in Account, Contact, Opportunity" action="{!soslDemo_method}"                reRender="acct,error,oppt,cont" status="actStatusId"/>
+    
+  </apex:form>
+ 
+   
+ 
+    <apex:pageBlock title="Accounts" id="acct">
+    <apex:pageblockTable value="{!accList }" var="acc">
+          <apex:column value="{!acc.name}"/>
+          <apex:column value="{!acc.Type}"/>
+       </apex:pageblockTable>
+    </apex:pageBlock>
+ 
+ <apex:pageBlock title="Contacts" id="cont">
+    <apex:pageblockTable value="{!conList}" var="con">
+      <apex:column value="{!con.name}"/>
+      <apex:column value="{!con.email}"/>
+ </apex:pageblockTable>
+ </apex:pageBlock>
+  
+ 
+  
+</apex:page>

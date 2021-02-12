@@ -1,0 +1,17 @@
+<apex:page >
+    <apex:includeLightning />
+    
+    <div id="lightning" />
+    
+    <script>
+    $Lightning.use("c:lcvfTest", function() {
+        $Lightning.createComponent("lightning:button",
+                                  {label : "Press Me!"},
+                                   "lightning",
+                                   function(component) {
+                                   console.log("button was created");
+                                   }
+                                  );
+    });
+    </script>
+</apex:page>

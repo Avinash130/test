@@ -1,0 +1,13 @@
+<apex:page standardController="Account" extensions="testopenweather" action="{!insertrec}">
+  <apex:pageBlock title="{!City} Weather">
+    <apex:pageBlockSection >
+        <apex:pageMessages ></apex:pageMessages>
+        <apex:outputText label="Temperature" value="{!temp}"></apex:outputText>
+        <apex:outputText label="Pressure" value="{!pressure}"></apex:outputText>
+        <apex:outputText label="Humidity" value="{!humidity}"></apex:outputText>
+        <apex:outputText label="Minimum" value="{!temp_min}"></apex:outputText>
+        <apex:outputText label="Maximum" value="{!temp_max}"></apex:outputText>
+      </apex:pageBlockSection>
+    
+    </apex:pageBlock>
+</apex:page>

@@ -1,0 +1,5 @@
+<aura:component >
+	
+    <p>Greetings ,fellow humans! what's your status?</p>
+    
+</aura:component>

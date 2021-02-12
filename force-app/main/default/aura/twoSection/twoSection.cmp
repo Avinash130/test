@@ -1,0 +1,88 @@
+<aura:component>
+    <aura:attribute name="activeSections" type="List"  />
+    <aura:attribute name="activeSectionsMessage" type="String" default="" />
+    
+    
+    <div class="slds-page-header slds-card__body_inner">
+        <p class="slds-text-title_caps slds-line-height_reset">Chetu</p>
+         <h2 class="slds-page-header__title slds-m-right_small slds-align-middle slds-truncate"  title="Chetu Sections">Chetu Sections</h2>
+
+
+    <p>{! v.activeSectionsMessage }</p>
+
+    <lightning:accordion 
+        allowMultipleSectionsOpen="true"
+        onsectiontoggle="{! c.handleSectionToggle }"
+        activeSectionName="{! v.activeSections }">
+        <lightning:accordionSection name="Chetu Document" label="Chetu Document">
+            
+            <lightning:accordionSection name="Home" label="Home">
+                
+                <p class="slds-card__body_inner"><b>Customer-Project.</b></p>
+                <lightning:button class="slds-button slds-button_brand" label="Customer-Project" onclick="{! c.handleClick }"/>
+                <p class="slds-card__body_inner"><b>Education.</b></p>
+                <p class="slds-card__body_inner"><b>Operations.</b></p>
+                <p class="slds-card__body_inner"><b>Internal-Projects.</b></p>
+                <p class="slds-card__body_inner"><b>Human-Resources.</b></p>
+                
+        </lightning:accordionSection>
+            
+            <lightning:accordionSection name="Education" label="Education">
+                
+                <p class="slds-card__body_inner"><b>My Responsibilities.</b></p>
+                <p class="slds-card__body_inner"><b>Training Videos.</b></p>
+                
+        </lightning:accordionSection>
+            
+            <lightning:accordionSection name="Operations" label="Operations">
+                
+                <p class="slds-card__body_inner"><b>OPS-Helpdesk.</b></p>
+                
+        </lightning:accordionSection>
+            
+            <lightning:accordionSection name="Internal-Projects" label="Internal-Projects">
+                
+                <p class="slds-card__body_inner"><b>IT-Helpdesk.</b></p>
+                
+        </lightning:accordionSection>
+            
+            <lightning:accordionSection name="Human-Resources" label="Human-Resources">
+                
+                <p class="slds-card__body_inner"><b>Team Discussion.</b></p>
+                <p class="slds-card__body_inner"><b>Benefits.</b></p>
+                
+        </lightning:accordionSection>
+            
+            
+        <lightning:accordionSection name="From 5:15" label="Form 5:15">
+            <aura:set attribute="actions">
+                <lightning:buttonMenu aura:id="menu" alternativeText="Show menu" menuAlignment="right" iconSize="x-small">
+                    <lightning:menuItem value="New" label="Menu Item One" />
+                    <lightning:menuItem value="Edit" label="Menu Item Two" />
+                </lightning:buttonMenu>
+            </aura:set>
+            <aura:set attribute="body">
+                
+    <div class="slds-p-around_medium slds-card__body_inner">
+        <p><lightning:formattedUrl value="https://mail.google.com/" tooltip="Use https://animal-blog-dev-ed.my" label=" Please Visit mail.google.com" target="_blank" /></p>
+        <p><lightning:formattedEmail value="avinash1.dpcb@gmail.com" target="_blank"/></p>
+    </div>      
+                <p class="slds-card__body_inner">Name.</p>
+                <p class="slds-card__body_inner">Phone.</p>
+                <p class="slds-card__body_inner">Email.</p>
+                
+            </aura:set>
+        </lightning:accordionSection>
+        <lightning:accordionSection name="MorningSnap" label="MorningSnap">
+                
+                <p class="slds-card__body_inner">Name.</p>
+                <p class="slds-card__body_inner">Phone.</p>
+                <p class="slds-card__body_inner">Email.</p>
+                
+        </lightning:accordionSection>
+      
+        </lightning:accordionSection>
+        </lightning:accordion>
+        </div>
+        
+</aura:component>

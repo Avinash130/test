@@ -1,0 +1,9 @@
+<apex:page controller="MyController" tabStyle="Account">
+    <apex:form >
+        <apex:pageBlock title="Hello {!$User.FirstName}!">
+            You are viewing the {!account.name} acount.<p/>
+            Change Account Name: <p/>
+            <apex:commandButton action="{!save}" value="Save new Account Name" /><p/>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

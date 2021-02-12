@@ -1,0 +1,32 @@
+<aura:component implements="lightning:availableForFlowScreens" access="global">
+    <!-- Get the script text from the flow -->
+    <aura:attribute name="scriptText" type="String" required="true" />
+    <!-- Pass the value of the selected option back to the flow -->
+    <aura:attribute name="value" type="String" />
+    
+    <!-- Display the script to guide the agent's call -->
+    <div class="script-container">
+        <div class="slds-card__header slds-grid slds-p-bottom_small slds-m-bootom_none">
+            <div class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="slds-medis__figure slds-align-top">
+                    <h2><lightning:icon iconName="utility:quotation_marks" 
+                                        title="Suggested script"/></h2>
+                </div>
+                <div class="slds-media__body">
+                    <ui:outputRichText class="script" value="{!v.scriptText}" />
+                </div>
+            </div>
+        </div>
+    </div>
+	<!-- Buttons for the agents to click, according to customer,s response -->
+    <div class="slds-p-top_large slds-p-bottom_large">
+        <p><lightning:formattedText value="Customer Response"
+                                   class="slds-text-body_small" /></p>
+        <lightning:buttongroup>
+            <lightning:button label="Yes" aura:id="Participate_Yes"
+                              variant="neutral" onclick="{!c.handleChange}" />
+            <lightning:button label="No" aura:id="Participate_No"
+                              variant="neutral" onclick="{!c.handleChange}" />
+        </lightning:buttongroup>
+    </div>
+</aura:component>

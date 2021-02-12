@@ -1,0 +1,76 @@
+<aura:component controller="SaveRegistrationFormDetails" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    
+    
+    <aura:attribute name="abc" type="String"  default="false" />
+    <aura:attribute name="NameOfStudents" type="String" default=""/>
+    <aura:attribute name="ParentsName" type="String" default=""/>
+    <aura:attribute name="StandardorClass" type="String" default=""/>
+    <aura:attribute name="NoFHours" type="String[]" default=" , none, less thn 1 hour, In between 1 to 4 hours, In between 4 to 8 hours, More then 8 hours."/>
+    
+    <aura:attribute name="usersResponse1" type="String" default="" />
+    <aura:attribute name="MobileNumber" type="Integer" default=""/>
+    <aura:attribute name="haveYouTakenCourseBefore" type="Boolean" default="false"/>
+    <aura:attribute name="AreYouInterstedInOnlineCourse" type="Boolean" />
+    <aura:attribute name="checkBoxValue" type="Boolean" default="false"/>
+    
+    <aura:attribute name="PageHeading" type="String" default="Registration Form For Students"/>
+    <aura:attribute name="EducationalDetailsList" type="List" default="[]"/>
+    <aura:attribute name="RegForm" type="Registration_Form__c" default="{'sobjectTpe' : 'Registration_From__c'}" />
+    <aura:attribute name="RegistrationRecordId" type="String" />
+    
+    <!--value stored in the attribute abc is -> {!v.abc} -->
+    
+    <div class="slds-m-top_xx-large">
+        <div class="slds-page-header">
+            <div class="slds-align_absolute-center">
+                <div class="slds-text-heading_large">
+                    
+                    {!v.PageHeading} 
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <br /><br />
+    <div class="slds-size_3-of-8">
+    <lightning:input  name="Studentsname" label="Enter Your Name" value="{!v.RegForm.Name}" />
+    <br />
+    <lightning:input name="parentname" label="Enter Your Parents Name" value="{!v.RegForm.Parent_Name__c}" />
+    
+    <br />
+    <lightning:input name="classname" label="Which Class Do You Study ?" value="{!v.RegForm.Which_Class__c}" />
+    
+    <br />
+    <lightning:select name="numberfStudyHours" label="How many hours do you study in a day ?" value="{!v.RegForm.Study_Hours__c}">
+        <aura:iteration items="{!v.NoFHours}" var="hrs">
+            <option value="{!hrs}" text="{!hrs}" />
+        </aura:iteration>
+    </lightning:select>
+    
+    <br />
+    <lightning:input name="mobileNumber" type="telephone" value="{!v.RegForm.Mobile_Number__c}" label="Enter Your Mobile Number"/>
+    
+        <aura:iteration items="{!v.EducationalDetailsList}" var="item" indexVar="index">
+         
+            <div>
+        <c:Add_Educational_Details RegistrationRecordId="{!v.RegistrationRecordId}" EducationDetailListInnerComponent="{!v.EducationalDetailsList}" indexNo="{!index}" />
+            <br/>
+            </div>
+       </aura:iteration>  
+        <br/>
+        <lightning:button iconName="utility:add" variant="border-filled" label="Add Educational Details" onclick="{!c.addDetails}"></lightning:button>
+        
+        <br /> <br/>
+    <lightning:input name="Firstchekbox" type="checkbox" aura:id="checkBox" onchange="{!c.onClickCheckBox}" label="Are you available on weekends to attend this online class ?" /> 
+    
+    <aura:if isTrue="{!v.checkBoxValue}">
+        <br />
+        <i><b style="color:orange;">That's Great !!</b> <b style="color:green;">Happy Learning !!</b></i>
+    </aura:if>
+    <br /><br />
+    <lightning:button label="Submit" onclick="{!c.doSubmit}">
+        
+    </lightning:button>
+    </div>
+</aura:component>

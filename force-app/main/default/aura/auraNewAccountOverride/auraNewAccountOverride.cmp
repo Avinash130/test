@@ -1,0 +1,15 @@
+<aura:component implements="lightning:actionOverride,lightning:hasPageReference">
+    <aura:handler name="init" value="{!this}" action="{!c.init}" />
+    
+    <lightning:navigation aura:id="navigationService" />
+    <lightning:pageReferenceUtils aura:id="pageRefUtils"/>
+    <lightning:recordEditForm
+                              objectApiName="Account"
+                              onload="{!c.handleCreateLoad}">
+        <lightning:messages />
+        <lightning:inputField aura:id="nameField" fieldName="Name" />
+        <lightning:inputField aura:id="numOfEmpField" fieldName="NumberOfEmployees" />
+        <lightning:inputField aura:id="ownerIdField" fieldName="OwnerId" />
+        <lightning:inputField aura:id="customCheckField" fieldName="CustomCheckbox__c" />
+    </lightning:recordEditForm>
+</aura:component>

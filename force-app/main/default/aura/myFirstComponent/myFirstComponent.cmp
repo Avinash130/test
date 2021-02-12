@@ -1,0 +1,12 @@
+<aura:component implements="force:appHostable" access="global" >
+   <div class="slds-p-around_small">
+	<h1 class="blue">This is my first LightningComponent</h1>
+    <p style="background-color:red; color:white; font-size:30px;">  I am proficient in JavaScript</p>
+    <div class="green">
+         I ma inside div Tag
+    </div>
+    <span class="black">
+         I am inside span tag
+    </span>
+</div>  
+</aura:component>

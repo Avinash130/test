@@ -1,0 +1,11 @@
+<aura:component >
+    <aura:attribute name="accountId" type="string"/>
+    <div class="sld-p-around_small">
+   <lightning:recordForm
+        recordId="{!v.accountId}"
+        objectApiName="Account"
+        layoutType="Full"
+        columns="2"
+        mode="readonly" />
+    </div>
+</aura:component>

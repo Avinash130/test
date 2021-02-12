@@ -1,0 +1,10 @@
+<aura:component controller="Mapvalue"  >
+
+    <aura:handler  name="init" value="{!this}" action="{!c.doinit}"/>
+
+        <aura:attribute type="map" name="Mapuse"/>  // Map type attribute to hold map value
+       
+        {!v.Mapuse.key1} 
+        {!v.Mapuse.key2}
+        {!v.Mapuse.key3}
+</aura:component>

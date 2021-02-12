@@ -1,0 +1,13 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	<lightning:card title="Display, Create, or Edit Records">
+        <lightning:recordEditForm recordId="{!v.recordId}"
+                                  objectApiName="Account"/>
+        <lightning:inputField fieldName="Name" />
+        <lightning:messages />
+        <lightning:button class="slds-m-top_small" type="submit" label="Create New" />
+        
+        <lightning:recordViewForm recordId="{!v.recordId}" objectApiName="Account" />
+        <lightning:messages />
+        <lightning:outputField fieldName="Name" />
+    </lightning:card>
+</aura:component>

@@ -1,0 +1,6 @@
+<aura:component>
+    <lightning:avatar size="x-samll" src="/docs/component-library/app/images/examples/avatar1.jpg" initials="JD" fallbackIconName="standard:person_account" alternativeText="Jan" class="slds-m-right_small"/>
+    <lightning:avatar size="small" src="/docs/component-library/app/images/examples/avatar2.jpg" initials="TP" fallbackIconName="standard:person_account" alternativeText="Tony Price" class="slds-m-right_small"/>
+    <lightning:avatar size="medium" src="/docs/component-library/app/images/examples/avatar3.jpg" initials="RE" fallbackIconName="standard:person_account" alternativeText="Ryan Eddie" class="slds-m-right_small"/>
+    <lightning:avatar size="large" src="/docs/component-library/app/images/examples/avatar4.jpg" initials="CR" fallbackIconName="statndard:person_account" alternativeText="Cindy Rice" class="slds-m-right_small"/>
+</aura:component>

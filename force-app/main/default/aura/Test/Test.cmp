@@ -1,0 +1,18 @@
+<aura:component controller="classController">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="objClassController" type="classController" />
+    
+    <!--access apex class Property with oClassController attribute-->
+    <div style="border:1px solid tomato; padding:18px; background-color:lightgreen">
+        <li>my name is {!v.objClassController.DeveloperName} .</li>
+        <li>i'm {!v.objClassController.DeveloperAge} years old.</li>
+        <li>my email is {!v.objClassController.DeveloperEmail} .</li>
+        <li>my phone number is {!v.objClassController.DeveloperPhone} .</li>
+    </div>
+    <div style="border:1px solid blue; padding:18px; background-color:violet">
+        Account list:-
+        <aura:iteration items="{!v.objClassController.lstOfAccount}" var="oAcc">
+            <li>{!oAcc.Name}</li>
+        </aura:iteration>
+    </div>
+</aura:component>

@@ -1,0 +1,5 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global">
+    <div> <b style="color:oceanblue;">HI I AM COMPONENT AND I AM GETTING CALLED FROM VF.</b></div>
+    <aura:attribute name="AccIDFromVfPage" type="String" />
+    <lightning:button label="Check ID from Vf" onclick="{!doAction}" />
+</aura:component>

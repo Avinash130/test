@@ -1,0 +1,5 @@
+<aura:component >
+<span class="slds-avatar slds-avatar_profile-image-large">
+   <span class="slds-assitive-text">Person name</span>
+</span> 
+    </aura:component>

@@ -1,0 +1,2 @@
+<apex:page controller="MutlipicklistFieldValue" action="insertAccount">
+</apex:page>

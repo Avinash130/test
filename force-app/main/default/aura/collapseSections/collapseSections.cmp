@@ -1,0 +1,58 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction"
+                access="global" >
+    <div class="slds-page-header">
+        <p class="slds-text-title_caps slds-line-height_reset">Chetu</p>
+         <h2 class="slds-page-header__title slds-m-right_small slds-align-middle slds-truncate"  title="Chetu Sections">Chetu Sections</h2>
+</div>
+<div class="slds-scrollable">
+    <!-- The rest of the page goes here -->
+    
+    <!--section 1 start-->  
+    <div class="slds-section slds-is-open" aura:id="5:15Section">
+        <!--section header-->
+        <h3 class="slds-section__title">
+            <button aria-controls="chetuList" class="slds-button slds-section__title-action">
+                <span onclick="{!c.toggleSection}" data-auraId="5:15Section">
+                    <lightning:icon iconName="utility:switch"
+                                    size="x-small"
+                                    class="slds-section__title-action-icon slds-button__icon_left"
+                                    alternativeText="button icon" 
+                                    />
+                </span>
+                <span class="slds-truncate" title="Fruits">Form 5:15 </span>
+            </button>
+        </h3>
+        <!--section body-->
+        <div class="slds-section__content" id="chetuList">
+            <p>Name</p>
+            <p>Phone</p>
+            <p>Email</p>
+        </div>
+    </div>
+    <!--section 1 end-->
+    
+    <!--section 2 start-->  
+    <div class="slds-section slds-is-open" aura:id="MorningSnapSection">
+        <!--section header-->
+        <h3 class="slds-section__title">
+            <button aria-controls="MorningSnapId" class="slds-button slds-section__title-action">
+                <span onclick="{!c.toggleSection}" data-auraId="MorningSnapSection">
+                    <lightning:icon iconName="utility:switch"
+                                    alternativeText="button icon"
+                                    size="x-small"
+                                    class="slds-section__title-action-icon slds-button__icon_left"/>
+                </span>
+                <span class="slds-truncate" title="MorningSnap">MorningSnap</span>
+            </button>
+        </h3>
+        <!--section body-->
+        <div class="slds-section__content" id="MorningSnapId">
+            <p>Nmae</p>
+            <p>Phone</p>
+            <p>Email</p>
+        </div>
+    </div>
+    <!--section 2 end-->
+    </div>
+   
+</aura:component>

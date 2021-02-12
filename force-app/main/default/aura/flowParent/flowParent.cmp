@@ -1,0 +1,3 @@
+<aura:component >
+	<c:flowFooter availableActions="{!v.availableActions}" navigateFlowEvent="{!c.handleNavigate}"/>
+</aura:component>

@@ -1,0 +1,13 @@
+<aura:component implements="force:lightningQuickAction,flexipage:availableForAllPageTypes" >
+    
+    
+    <aura:attribute name="FirstName" type="String" />
+    <aura:attribute name="LastName" type="String" />
+    <div style="background-color:orange; color:blue">
+    <lightning:input label="Enter First Name" value="{!v.FirstName}" />
+    <lightning:input label="Enter Last Name" value="{!v.LastName}" />
+    <br />
+    <lightning:button label="Add Contact" onclick="{!c.addContact}"/>
+    </div>
+    
+</aura:component>

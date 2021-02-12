@@ -1,0 +1,4 @@
+<design:component label="Samall Header">
+    <design:attribute name="blueBackground" label="Blue Background" />
+    <design:attribute name="smallLogo" label="Samll Logo"/>
+</design:component>

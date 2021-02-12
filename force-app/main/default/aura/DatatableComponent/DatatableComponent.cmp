@@ -1,0 +1,21 @@
+<aura:component controller="contactController">
+    <aura:attribute name="mydata" type="Contact[]"/>
+    <aura:attribute name="mycolumns" type="List"/>
+    <aura:attribute name="conSelect" type="boolean"/>
+    <aura:attribute name="selectedContacts" type="List"/>
+    <aura:handler name="init" value="{! this }" action="{! c.doinit }"/>
+    <lightning:datatable data="{! v.mydata }"
+        columns="{! v.mycolumns }"
+        keyField="id"
+        onrowselection="{!c.findSelected}"           
+        />
+    <aura:if isTrue="{!v.conSelect}">
+        <b>Selected Contact</b>
+    <aura:iteration items="{!v.selectedContacts}" var="con">
+        <lightning:card title="Selected Contact"  >
+        {!con.Name}
+        </lightning:card>
+     
+    </aura:iteration>
+    </aura:if>
+</aura:component>

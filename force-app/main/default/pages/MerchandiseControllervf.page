@@ -1,0 +1,13 @@
+<apex:page controller="MerchandiseController" readOnly="true">
+    <p>Here is all the merchandise we have:</p>
+    <apex:dataTable value="{!AllMerchandise}" var="product">
+        <apex:column >
+            <apex:facet name="header">Product</apex:facet>
+            <apex:outputText value="{!product.Name}" />
+        </apex:column>
+        <apex:column >
+            <apex:facet name="header">Price</apex:facet>
+            <apex:outputText value="{!product.Price__c}" />
+        </apex:column>
+    </apex:dataTable>
+</apex:page>

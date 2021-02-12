@@ -1,0 +1,4 @@
+<aura:component>
+    <lightning:badge label="Start Position" iconName="utility:success"/>
+    <lightning:badge label="End Position" iconName="utility:success" iconPosition="end"/>
+</aura:component>

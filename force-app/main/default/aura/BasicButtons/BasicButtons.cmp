@@ -1,0 +1,8 @@
+<aura:component>    
+
+    <lightning:buttonIcon iconName="utility:close"   variant="bare-inverse" alternativeText="Close window" title="Close" />
+    <lightning:buttonIcon iconName="utility:close"   variant="bare-inverse" disabled="true" alternativeText="Close (disabled)" title="Close (disabled)" />
+    <lightning:buttonIcon iconName="utility:close"   variant="bare-inverse"   alternativeText="Close modal" title="Close" />
+    <lightning:buttonIcon iconName="utility:close"   disabled="true"  variant="bare-inverse" alternativeText="Close (disabled)" title="Close (disabled)" />
+
+</aura:component>

@@ -1,0 +1,7 @@
+<aura:component >
+	<aura:attribute name="color" type="List" default="[
+                                                      {'label' : 'Red', 'value' : 'Red'},
+                                                      {'' : '', '' : ''},
+                                                      {'' : '', '' : ''}
+                                                      ]"/>
+</aura:component>
