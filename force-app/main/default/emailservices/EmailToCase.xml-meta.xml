@@ -3,12 +3,12 @@
     <apexClass xsi:nil="true"/>
     <attachmentOption>All</attachmentOption>
     <authenticationFailureAction>Bounce</authenticationFailureAction>
-    <authorizationFailureAction>Bounce</authorizationFailureAction>
+    <authorizationFailureAction>Discard</authorizationFailureAction>
     <emailServicesAddresses>
-        <developerName>avinash1_dpcb</developerName>
+        <developerName>avinash_dpcb</developerName>
         <isActive>true</isActive>
-        <localPart>avinash1.dpcb</localPart>
-        <runAsUser>avinash1@salesforce.com</runAsUser>
+        <localPart>avinash.dpcb</localPart>
+        <runAsUser>avinash11@salesforce.com</runAsUser>
     </emailServicesAddresses>
     <functionInactiveAction>Bounce</functionInactiveAction>
     <functionName>EmailToCase</functionName>
